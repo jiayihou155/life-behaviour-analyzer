@@ -1,19 +1,52 @@
-# life-behaviour-analyzer
-This project implements four recording modules: study, sleep, mood and consumption. It performs statistical analysis on multi‑dimensional personal data and automatically generates review reports.
-✨ Highlights
-Unlike ordinary memo applications that only store data, this system supports data recording as well as data analysis. It calculates study duration, sleep quality, mood distribution and categorized consumption summary, and outputs review reports in Markdown format.
-It can serve as a daily personal review tool. Future plans include refactoring the whole project with Java for iterative upgrades.
-📦 Tech Stack
-Python
-Pandas for data analysis
-JSON for persistent local storage
-📋 Four Functional Modules
-📚 Study Record: input subject, study duration and notes
-😴 Sleep Record: bedtime, wake‑up time and sleep‑quality score
-💛 Mood Record: mood level plus text notes
-💰 Consumption Record: record amount and spending category
-🚀 How to Run
-1.Install required dependencies
-2.Launch the program
-3.Register an account, input your data and generate review reports.
-User private data is stored locally in data.json. Gitignore is configured to prevent this file from being uploaded.
+# Personal Life Multi‑Dimensional Behavior Tracker (CLI) v1.1
+
+A robust, Python‑based self‑quantification system designed to log, track, and analyze individual daily behaviors across four core dimensions: Study, Sleep, Mood, and Expense.
+
+## 🌟 Key Features
+- **User Authentication & Security**: User registration and login protected with **SHA‑256 password hashing**.
+- **Multi‑Module Behavior Logging**:
+  - 📚 **Study**: Duration tracking, subject tagging, and custom notes.
+  - 😴 **Sleep**: Bedtime, wake time, and daily sleep quality ratings (1–5).
+  - 💛 **Mood**: Daily emotional state scores (1–5) and journal notes.
+  - 💰 **Expense**: Transaction amounts, categories, and spending details.
+- **Robustness & Validation**:
+  - Strictly enforces `YYYY‑MM‑DD` date formatting and rating score ranges.
+  - Exception handling for invalid numerical inputs to prevent runtime crashes.
+  - Built‑in text length constraints to prevent unexpected input overflows.
+- **Logging & Isolated Storage**:
+  - Automatically manages user data, logs, and generated reports within an isolated `data/` directory.
+  - Operational logs recorded via Python's standard `logging` module.
+- **Automated Data Analysis**: Generates comprehensive review reports in Markdown format powered by `pandas`.
+
+## 🛠️ Tech Stack
+- **Language**: Python 3.x
+- **Data Analysis**: Pandas
+- **Storage**: JSON (Locally stored with user data separation)
+- **Security & Utilities**: Hashlib (SHA‑256), Datetime, Logging
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+cd YOUR_REPOSITORY_NAME
+```
+2. **Install dependencies**
+```bash
+pip install pandas
+```
+3. **Run the application**
+```bash
+python life_analyzer.py
+```
+## 📈 Project Roadmap
+- [x] v1.0：Basic CLI functions, four‑dimension record‑keeping and markdown report generation.
+- [x] v1.1 (Current): Date validation, SHA‑256 password hash, independent data directory, logging module, text‑length limit.
+- [ ] v1.2 (Planned): Further optimize business logic.
+- [ ] v2.0 (Planned): Migrate local JSON storage to a relational database (PostgreSQL / SQLite) for optimized multi‑user query performance.
+- [ ] v3.0 (Planned): Build interactive data visualization dashboards using Matplotlib / Seaborn.
+- [ ] v4.0 (Planned): Refactor backend into RESTful APIs using FastAPI with a modern Web frontend.
+
+
+
+
