@@ -28,8 +28,8 @@ A robust, Python‑based self‑quantification system designed to log, track, an
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/jiayihou155/life‑behaviour‑analyzer.git
-cd life‑behaviour‑analyzer
+git clone https://github.com/jiayihou155/life-behaviour-analyzer.git
+cd life-behaviour-analyzer
 ```
 2. **Install dependencies**
 ```bash
